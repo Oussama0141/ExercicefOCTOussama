@@ -8,7 +8,13 @@ import java.io.Serializable;
 public class Université extends Departement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    public long idUniversite;
-    public String nomUniversite;
+    private long idUniversite;
+    private String nomUniversite;
 
+    public Université() {
+    }
+
+    public Université(long idDepartement, String nomDepartement) {
+        super(idDepartement, nomDepartement);
+    }
 }
